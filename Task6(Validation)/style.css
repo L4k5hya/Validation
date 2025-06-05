@@ -1,0 +1,122 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Form container */
+.form-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 500px;
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+.form-container h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Labels and inputs */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* Error message styling */
+.error {
+  color: #ff7b7b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Submit button */
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  transform: scale(1.02);
+}
+
+/* Success message */
+#successMessage {
+  color: #c6ffdd;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+}
